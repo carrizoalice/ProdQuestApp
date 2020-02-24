@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ProdQuest</string>
+    <string name="description_txt">Compro y amo básicamente todos los jeans elastizados de Kosiuko y estos definitivamente no me decepcionan. Estos son cómodos y tipo boyfriend con roturas. ¡Llevo meses usándolo y no se
+estiraron!, definitivamente recomiendo estos jeans.</string>
+    <string name="marca_post">KOSIUKO</string>
+    <string name="txt_marca" >RICKY \nSARKANY</string>
+    <string name="titulo_marcas">Marcas</string>
+    <string name="description_sarkany_txt">Calzo 37 y me fueron perfectas, son cómodas y el color combina muy bien con jeans azules. Al mes se le salió una hebilla, igualmente muy amablemente me lo arreglaron.</string>
+    <string name="tit_publicaciones" >Publicaciones recientes</string>
 </resources>

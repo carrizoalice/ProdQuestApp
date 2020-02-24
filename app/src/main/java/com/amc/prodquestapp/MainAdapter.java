@@ -12,10 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
+public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> implements View.OnClickListener{
+
+    //para onclick implementar view.concliklistener arriba
 
     private ArrayList<MainModel> mainModels;
     private Context context;
+    private View.OnClickListener listener; //para onclick
 
     public MainAdapter(Context context, ArrayList<MainModel> mainModels){
         this.context = context;
@@ -28,6 +31,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_item, parent, false);
+
+        view.setOnClickListener(this); //escuchar el evento de seleccion
+
         return new ViewHolder(view);
     }
 
@@ -40,6 +46,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return mainModels.size();
+    }
+
+    ////para onclick crear metodo publico
+    public void setOnClickListener(View.OnClickListener listener){
+        //que el listener q generamos arriba sea igual al listener q le llega
+        this.listener = listener;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if( listener != null){
+            listener.onClick(view);
+        }
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

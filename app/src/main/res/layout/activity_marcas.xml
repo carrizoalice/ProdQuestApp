@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/content_description"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:paddingLeft="30sp"
+                android:textColor="@color/white"
+                android:background="@drawable/fondo_top"
+                android:textSize="29sp"
+                android:textStyle="normal"
+                android:drawableLeft="@drawable/logo_sarkany"
+                android:text="@string/txt_marca"
+                android:gravity="left|center"
+                android:drawablePadding="20sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tit_publicaciones"
+                android:paddingTop="20sp"
+                android:paddingLeft="10sp"
+                android:paddingBottom="10sp"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/img_post2"
+                android:layout_width="wrap_content"
+                android:layout_height="427dp"
+                android:src="@mipmap/img_post2"
+                android:contentDescription="@string/description_txt"/>
+
+            <LinearLayout
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RICKY SARKANY"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SPRING SUMMER 2020"
+                android:textSize="10sp"
+                android:textStyle="normal"
+                android:paddingBottom="3dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:drawablePadding="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SE DESPEGÓ UNA HEBILLA"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="carrizoalice"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="16 de julio 2019 | Bs. As. Balvanera"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:paddingBottom="5dp"/>
+
+
+            <TextView
+                android:id="@+id/content_description2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description_sarkany_txt"
+                android:textSize="14sp"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

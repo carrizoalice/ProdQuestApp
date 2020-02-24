@@ -21,6 +21,9 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".MarcaActivity">
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

@@ -1,7 +1,10 @@
 package com.amc.prodquestapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -16,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<MainModel> mainModels;
     MainAdapter mainAdapter;
 
+    ArrayList<String> nombres;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,14 +32,20 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
 
-        Integer[] langLogo = {R.drawable.logo_prune, R.drawable.logo_rapsodia, R.drawable.logo_paula, R.drawable.logo_sarkany,R.drawable.logo_jazmin_chebar, R.drawable.logo_wanama};
+        final Integer[] langLogo = {R.drawable.logo_prune, R.drawable.logo_rapsodia, R.drawable.logo_paula, R.drawable.logo_sarkany,R.drawable.logo_jazmin_chebar, R.drawable.logo_wanama};
 
-        String[] langName = {"Prune", "Rapsodia", "Paula", "Sarkany", "Jazmín", "Wanama"};
+        final String[] langName = {"Prune", "Rapsodia", "Paula", "Sarkany", "Jazmín", "Wanama"};
 
         mainModels = new ArrayList<>();
         for (int i=0; i<langLogo.length; i++){
             MainModel model = new MainModel(langLogo[i]);
             mainModels.add(model);
+        }
+
+        nombres = new ArrayList<>();
+        for (int i=0; i<langName.length; i++){
+            String names = new String(langName[i]);
+            nombres.add(names);
         }
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(
@@ -46,7 +57,27 @@ public class MainActivity extends AppCompatActivity {
         //initialize MainAdapter
 
         mainAdapter = new MainAdapter(MainActivity.this, mainModels);
+
+        //para onclick
+        mainAdapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Selección: " + nombres.get(recyclerView.getChildAdapterPosition(view)), Toast.LENGTH_SHORT).show();
+            }
+        });
+
         recyclerView.setAdapter(mainAdapter);
+
+
+
+    }
+
+
+    //METODO BTN
+    public void Sarkany(View view){
+        Intent sarkany = new Intent(this, MarcaActivity.class);
+        startActivity(sarkany);
+
 
     }
 }

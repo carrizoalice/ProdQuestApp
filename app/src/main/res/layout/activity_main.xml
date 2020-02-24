@@ -9,13 +9,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Marcas"
+        android:text="@string/titulo_marcas"
         android:textSize="15sp"
         android:textStyle="bold"/>
 
@@ -31,6 +43,110 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/bienvenida" />
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="195dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="left"
+                    android:onClick="Sarkany"
+                    android:text="SARKANY" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="195dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="right"
+                    android:text="ZARA" />
+
+
+            </LinearLayout>
+
+            <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Publicaciones populares"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:paddingTop="20dp"        />
+
+    <ImageView
+        android:id="@+id/img_post"
+        android:layout_width="wrap_content"
+        android:layout_height="427dp"
+        android:src="@mipmap/img_post" />
+
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/marca_post"
+       android:textSize="12sp"
+       android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WINTER SEASON 2020"
+        android:textSize="10sp"
+        android:textStyle="normal"
+        android:paddingBottom="3dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_star_black_24dp"
+        android:drawablePadding="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOVE THESE"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="carrizoalice"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20 de febrero 2020 | Bs. As. Balvanera"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ALTURA: 1.61 - PESO: 46 - TALLE ORDENADO: S"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"/>
+
+    <TextView
+       android:id="@+id/content_description"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/description_txt"
+       android:textSize="14sp"
+       android:textStyle="normal"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
 
